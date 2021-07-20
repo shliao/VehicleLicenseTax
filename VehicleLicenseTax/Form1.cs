@@ -128,6 +128,8 @@ namespace VehicleLicenseTax
             this.cbbCarType.SelectedIndex = 0;
             this.cbbDisplacement.SelectedIndex = 0;
             this.txtBoxTotalResult.Text = "";
+            this.label7.Text = "總金額為:";
+
         }
 
         private void rbPerior1_CheckedChanged(object sender, EventArgs e)
@@ -138,6 +140,8 @@ namespace VehicleLicenseTax
             this.cbbCarType.SelectedIndex = 0;
             this.cbbDisplacement.SelectedIndex = 0;
             this.txtBoxTotalResult.Text = "";
+            this.label7.Text = "總金額為:";
+
         }
         #endregion
 
@@ -268,11 +272,9 @@ namespace VehicleLicenseTax
                 String dtpPE = this.dtpPeriorEnd.Value.ToString("yyyy/MM/dd");
                 DateTime dateStart = Convert.ToDateTime(dtpPS);
                 DateTime dateEnd = Convert.ToDateTime(dtpPE);
-                int timeSpan = (dateEnd - dateStart.AddDays(-1)).Days;
-                decimal ts = Convert.ToDecimal(timeSpan);
 
                 //判斷結束日期是否小於起始日期
-                if (ts >= 1)
+                if (dateEnd >= dateStart)
                 {
                     //選擇車型，建立 List 內容
                     if (this.cbbCarType.SelectedIndex == 0)
@@ -515,11 +517,12 @@ namespace VehicleLicenseTax
         private void Init()
         {
             this.rbPerior1.Checked = true;
+            this.panel2.Visible = false;
+            this.label7.Visible = false;
             this.cbbCarType.SelectedIndex = 0;
             this.cbbDisplacement.SelectedIndex = 0;
             this.txtBoxTotalResult.Text = "";
-            this.panel2.Visible = false;
-            this.label7.Visible = false;
+            this.label7.Text = "總金額為:";
         }
 
         /// <summary> 判斷今年是否為閏年，是:回傳 366 天，否:回傳 365 天 </summary>
