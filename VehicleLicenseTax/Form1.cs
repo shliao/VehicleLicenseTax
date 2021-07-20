@@ -129,7 +129,6 @@ namespace VehicleLicenseTax
             this.cbbDisplacement.SelectedIndex = 0;
             this.txtBoxTotalResult.Text = "";
             this.label7.Text = "總金額為:";
-
         }
 
         private void rbPerior1_CheckedChanged(object sender, EventArgs e)
@@ -141,7 +140,6 @@ namespace VehicleLicenseTax
             this.cbbDisplacement.SelectedIndex = 0;
             this.txtBoxTotalResult.Text = "";
             this.label7.Text = "總金額為:";
-
         }
         #endregion
 
