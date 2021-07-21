@@ -286,6 +286,8 @@ namespace VehicleLicenseTax
                             DateTime dateStart2 = Convert.ToDateTime(dtpPS2);
                             DateTime dateEnd2 = Convert.ToDateTime(dtpPE2);
                             int perc = (int)this.GetTaxMotorcycle();//帶入金額
+                            var newStart = (dateStart2 > dateStart) ? dateStart2 : dateStart;
+                            var newEnd = (dateEnd2 > dateEnd) ? dateEnd2 : dateEnd;
 
                             //判斷是否為閏年
                             int timeSpan2 = (dateEnd2.DayOfYear - dateStart2.DayOfYear + 1);
@@ -299,7 +301,7 @@ namespace VehicleLicenseTax
                             {
                                 timeSpan3 = 366;
                             }
-                            total += perc * Convert.ToInt32(dateEnd2.DayOfYear - dateStart2.DayOfYear + 1) / timeSpan3;
+                            total += perc * Convert.ToInt32(newEnd.DayOfYear - newStart.DayOfYear + 1) / timeSpan3;
 
                             this.txtBoxTotalResult.Text +=
                             $"使用期間: {i}/1/1 ~ {i}/12/31" +
@@ -331,6 +333,8 @@ namespace VehicleLicenseTax
                             DateTime dateStart2 = Convert.ToDateTime(dtpPS2);
                             DateTime dateEnd2 = Convert.ToDateTime(dtpPE2);
                             int perc = (int)this.GetTaxTruck();//帶入金額
+                            var newStart = (dateStart2 > dateStart) ? dateStart2 : dateStart;
+                            var newEnd = (dateEnd2 > dateEnd) ? dateEnd2 : dateEnd;
 
                             //判斷是否為閏年
                             int timeSpan2 = (dateEnd2.DayOfYear - dateStart2.DayOfYear + 1);
@@ -344,7 +348,7 @@ namespace VehicleLicenseTax
                             {
                                 timeSpan3 = 366;
                             }
-                            total += perc * Convert.ToInt32(dateEnd2.DayOfYear - dateStart2.DayOfYear + 1) / timeSpan3;
+                            total += perc * Convert.ToInt32(newEnd.DayOfYear - newStart.DayOfYear + 1) / timeSpan3;
 
                             this.txtBoxTotalResult.Text +=
                             $"使用期間: {i}/1/1 ~ {i}/12/31" +
@@ -376,6 +380,8 @@ namespace VehicleLicenseTax
                             DateTime dateStart2 = Convert.ToDateTime(dtpPS2);
                             DateTime dateEnd2 = Convert.ToDateTime(dtpPE2);
                             int perc = (int)this.GetTaxCoach();//帶入金額
+                            var newStart = (dateStart2 > dateStart) ? dateStart2 : dateStart;
+                            var newEnd = (dateEnd2 > dateEnd) ? dateEnd2 : dateEnd;
 
                             //判斷是否為閏年
                             int timeSpan2 = (dateEnd2.DayOfYear - dateStart2.DayOfYear + 1);
@@ -389,7 +395,7 @@ namespace VehicleLicenseTax
                             {
                                 timeSpan3 = 366;
                             }
-                            total += perc * Convert.ToInt32(dateEnd2.DayOfYear - dateStart2.DayOfYear + 1) / timeSpan3;
+                            total += perc * Convert.ToInt32(newEnd.DayOfYear - newStart.DayOfYear + 1) / timeSpan3;
 
                             this.txtBoxTotalResult.Text +=
                             $"使用期間: {i}/1/1 ~ {i}/12/31" +
@@ -421,6 +427,8 @@ namespace VehicleLicenseTax
                             DateTime dateStart2 = Convert.ToDateTime(dtpPS2);
                             DateTime dateEnd2 = Convert.ToDateTime(dtpPE2);
                             int perc = (int)this.GetTaxPrivatePassengerCar();//帶入金額
+                            var newStart = (dateStart2 > dateStart) ? dateStart2 : dateStart;
+                            var newEnd = (dateEnd2 > dateEnd) ? dateEnd2 : dateEnd;
 
                             //判斷是否為閏年
                             int timeSpan2 = (dateEnd2.DayOfYear - dateStart2.DayOfYear + 1);
@@ -434,7 +442,7 @@ namespace VehicleLicenseTax
                             {
                                 timeSpan3 = 366;
                             }
-                            total += perc * Convert.ToInt32(dateEnd2.DayOfYear - dateStart2.DayOfYear + 1) / timeSpan3;
+                            total += perc * Convert.ToInt32(newEnd.DayOfYear - newStart.DayOfYear + 1) / timeSpan3;
 
                             this.txtBoxTotalResult.Text +=
                             $"使用期間: {i}/1/1 ~ {i}/12/31" +
@@ -466,6 +474,8 @@ namespace VehicleLicenseTax
                             DateTime dateStart2 = Convert.ToDateTime(dtpPS2);
                             DateTime dateEnd2 = Convert.ToDateTime(dtpPE2);
                             int perc = (int)this.GetTaxCommercialPassengerCar();//帶入金額
+                            var newStart = (dateStart2 > dateStart) ? dateStart2 : dateStart;
+                            var newEnd = (dateEnd2 > dateEnd) ? dateEnd2 : dateEnd;
 
                             //判斷是否為閏年
                             int timeSpan2 = (dateEnd2.DayOfYear - dateStart2.DayOfYear + 1);
@@ -479,7 +489,7 @@ namespace VehicleLicenseTax
                             {
                                 timeSpan3 = 366;
                             }
-                            total += perc * Convert.ToInt32(dateEnd2.DayOfYear - dateStart2.DayOfYear + 1) / timeSpan3;
+                            total += perc * Convert.ToInt32(newEnd.DayOfYear - newStart.DayOfYear + 1) / timeSpan3;
 
                             this.txtBoxTotalResult.Text +=
                             $"使用期間: {i}/1/1 ~ {i}/12/31" +
